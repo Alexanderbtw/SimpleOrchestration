@@ -1,0 +1,6 @@
+@SimpleOrchestration.APIGateway_HostAddress = http://localhost:5133
+
+GET {{SimpleOrchestration.APIGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
