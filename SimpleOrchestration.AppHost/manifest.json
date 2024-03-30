@@ -40,7 +40,7 @@
         }
       }
     },
-    "apiGateway": {
+    "api-gateway": {
       "type": "project.v0",
       "path": "../SimpleOrchestration.APIGateway/SimpleOrchestration.APIGateway.csproj",
       "env": {

@@ -1,0 +1,18 @@
+resources:
+- deployment.yml
+- service.yml
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+configMapGenerator:
+- name: api-gateway-env
+  literals:
+    - OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES=true
+    - OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES=true
+    - services__admin__0=http://admin:8080
+    - services__admin__1=https://admin:8443
+    - services__main__0=http://main:8080
+    - services__main__1=https://main:8443
+    - ASPNETCORE_URLS=http://+:8080
+

@@ -6,7 +6,7 @@ builder.AddServiceDefaults();
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello, World from MainAPI!");
+app.MapGet("/", (HttpRequest request) => $"Hello, World from MainAPI! This is visible from route {request.Path}");
 app.MapDefaultEndpoints();
 
 app.Run();

@@ -3,8 +3,9 @@ using SimpleOrchestration.ServiceDefaults;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
+var proxyConfiguration = builder.Configuration.GetSection("ReverseProxy");
 builder.Services.AddReverseProxy()
-    .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"))
+    .LoadFromConfig(proxyConfiguration)
     .AddServiceDiscoveryDestinationResolver();
 
 var app = builder.Build();

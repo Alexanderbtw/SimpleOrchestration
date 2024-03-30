@@ -1,7 +1,7 @@
 resources:
 - main
 - admin
-- apiGateway
+- api-gateway
 
 generatorOptions:
   disableNameSuffixHash: true
